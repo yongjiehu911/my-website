@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design Details and Prototype | Hybrid Visitor Information System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="prototype">
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Hybrid Visitor Information System home">
+        <span>Hybrid Visitor Information System</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation" data-nav>
+        <a href="index.html" data-page-link="home">Home</a>
+        <a href="project-details-and-background.html" data-page-link="background">Project Background</a>
+        <a href="problem-description-and-design-criteria.html" data-page-link="problem">Problem</a>
+        <a href="design-options-and-selection-design.html" data-page-link="options">Options</a>
+        <a href="prototype.html" data-page-link="prototype">Prototype</a>
+        <a href="implementation-plan.html" data-page-link="implementation">Implementation</a>
+        <a href="cost-analysis.html" data-page-link="cost">Cost</a>
+        <a href="appendix.html" data-page-link="appendix">Appendix</a>
+        <a href="recommendation.html" data-page-link="recommendation">Recommendation</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero" aria-labelledby="prototype-title">
+        <p class="eyebrow">Design details and prototype</p>
+        <h1 id="prototype-title">Hybrid Visitor Information System</h1>
+        <p>
+          A practical offline-first system combining physical signage, QR access points and locally stored visitor
+          information.
+        </p>
+      </section>
+
+      <section class="content-page">
+        <article class="content-card lead-card">
+          <span>4. Detailed design</span>
+          <h2>Physical signage works together with offline digital information.</h2>
+          <p>
+            The proposed solution is a hybrid visitor information system that combines physical signage with offline
+            digital information. The system is designed specifically for the remote conditions of Lama Lama Country,
+            where internet connectivity is often unreliable or unavailable. The purpose of the system is to improve
+            visitor understanding, support respectful behaviour on Country, and reduce repeated explanations from
+            Rangers. The design focuses on practicality, accessibility, cultural protection, and long-term
+            sustainability.
+          </p>
+        </article>
+
+        <div class="content-grid">
+          <article class="content-card">
+            <span>Offline-first approach</span>
+            <h2>Visitors access the core package before arrival.</h2>
+            <p>
+              Before arriving at Lama Lama Country, visitors are encouraged to download an offline information package
+              through booking confirmation pages, email reminders, or locations with internet access such as Coen,
+              Cairns, or Ranger Base. This package contains visitor rules, maps, safety guidance, recommended travel
+              routes, and approved cultural information.
+            </p>
+            <p>
+              Once downloaded, the information can be accessed without requiring internet connectivity. This is
+              important because many parts of Lama Lama Country have weak or no mobile network coverage.
+            </p>
+          </article>
+          <article class="content-card">
+            <span>Physical signage</span>
+            <h2>Signs provide the first layer of guidance.</h2>
+            <p>
+              At entry points, visitors are introduced to the system through physical signage. These signs provide
+              simplified maps, route information, safety warnings, and clear behavioural guidance. The signs use large
+              icons, directional arrows, colour coding, and limited text to improve readability.
+            </p>
+            <p>
+              Numbered nodes and "You Are Here" maps help visitors navigate independently, while repeated core
+              information means visitors can still complete a basic journey using physical signage alone.
+            </p>
+          </article>
+        </div>
+
+        <article class="content-card">
+          <span>Digital component</span>
+          <h2>QR codes connect visitors to locally stored content.</h2>
+          <p>
+            Visitors who have downloaded the offline package can scan QR codes or enter node numbers to open additional
+            information stored locally on their devices. The QR codes do not direct users to live webpages because
+            internet access may not be available on-site. Instead, the QR codes connect visitors to pre-cached offline
+            content using Progressive Web App technology and service workers.
+          </p>
+          <p>
+            Different visitor routes are colour-coded to improve navigation clarity. Green routes indicate basic visitor
+            paths, blue routes indicate camping areas, and red routes identify culturally sensitive or restricted areas.
+            Every major sign includes the same core information: current location, directional arrows, route colours,
+            node numbers, and short safety reminders.
+          </p>
+        </article>
+
+        <div class="content-grid">
+          <article class="content-card">
+            <span>Community review</span>
+            <h2>Cultural information remains community controlled.</h2>
+            <p>
+              Community concerns were an important consideration during the design process. One major concern was the
+              protection of cultural knowledge and culturally sensitive locations. To address this issue, all cultural
+              information shared through the system would be reviewed and approved by Yintjingga Aboriginal Corporation
+              and relevant community stakeholders before publication.
+            </p>
+            <p>
+              Layered information access ensures that public visitor information is separated from culturally
+              restricted knowledge.
+            </p>
+          </article>
+          <article class="content-card">
+            <span>Maintenance</span>
+            <h2>The system is designed for remote maintenance.</h2>
+            <p>
+              Rangers can inspect signage during routine patrols, while simple repairs such as replacing QR stickers or
+              updating printed signs can be completed locally without specialised technical staff. The use of durable
+              materials also improves weather resistance and reduces replacement frequency.
+            </p>
+          </article>
+        </div>
+
+        <article class="content-card lead-card">
+          <span>Prototype</span>
+          <h2>The prototype demonstrates how visitors use both physical and digital components.</h2>
+          <p>
+            A prototype of the Hybrid Visitor Information System was developed to demonstrate how visitors would
+            interact with both the physical and digital components of the design in Lama Lama Country. The group focused
+            on the parts that tourists would directly interact with, including the app UI, entrance signboards, QR
+            codes, and offline information screens.
+          </p>
+          <p>
+            The app UI prototype was created using Figma and included offline maps, route selection, safety alerts,
+            camping information, and cultural guidance. The physical signboard prototype displayed a "You are here"
+            map, colour-coded routes, numbered stops, directional arrows, safety reminders, and QR codes.
+          </p>
+          <p>
+            Prototype testing focused on the app usage process. Testers simulated tourists and completed tasks without
+            an internet connection: finding the map, understanding routes, viewing safety alerts, and finding
+            information about culturally sensitive areas. Most users completed the basic operations smoothly, and the
+            test also showed that pre-downloaded offline information was more reliable than live webpages in remote
+            areas.
+          </p>
+          <p>
+            Feedback led to modifications including larger key buttons, stronger route colour indicators, earlier
+            cultural reminders, and clearer safety information. Overall, the prototype confirmed that the hybrid visitor
+            information system is practical, accessible, and suitable for the environmental and connectivity conditions
+            of Lama Lama Country.
+          </p>
+          <div class="inline-actions">
+            <a class="button secondary dark" href="appendix.html">View appendix visuals</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
